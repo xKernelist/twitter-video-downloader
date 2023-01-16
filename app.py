@@ -1,7 +1,6 @@
 from flask import Flask
 from flask import send_file
 import subprocess
-import asyncio
 
 app = Flask(__name__)
 
@@ -15,3 +14,5 @@ def hello_world(url):
     subprocess.run(["youtube-dl", "-o", f"{file_name}.mp4", url])
     #return f"{url}"
     return send_file(f"{file_name}.mp4")
+
+app.run(host="0.0.0.0")
