@@ -15,4 +15,4 @@ def hello_world(url):
     #return f"{url}"
     return send_file(f"{file_name}.mp4")
 
-app.run(host="0.0.0.0")
+app.run(host="0.0.0.0", ssl_context='adhoc')
