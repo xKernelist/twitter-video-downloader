@@ -16,6 +16,6 @@ RUN apk add ffmpeg
 COPY . /app
 
 # configure the container to run in an executed manner
-ENTRYPOINT [ "flask" ]
+ENTRYPOINT [ "python" ]
 
-CMD ["run" ]
+CMD ["app.py" ]
